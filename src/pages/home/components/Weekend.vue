@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title">周末去哪儿</div>
-    <ul v-for="item in recommendList" :key="item.id">
+    <ul v-for="item in list" :key="item.id">
       <li class="item border-bottom">
         <div class="item-img-wrapper">
           <img
@@ -19,6 +19,7 @@
 
 <script>
   export default {
+    props: {list: Array},
     name: "Recommend",
     data() {
       return {
@@ -58,7 +59,7 @@
   .item-img-wrapper
     overflow: hidden
     height 0
-    padding-bottom 33.9%
+    padding-bottom 37.09%
     .item-img
       width 100%
 

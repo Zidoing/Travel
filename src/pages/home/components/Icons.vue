@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
 
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
@@ -19,11 +19,13 @@
 <script>
   export default {
     name: "Icons",
+    props: {
+      list: Array
+    },
     data() {
       return {
         swiperOption: {
-          pagination: '.swiper-pagination',
-          loop: true
+          autoplay: false,
         },
         iconList: [
           {id: "001", imgUrl: "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png", desc: "景点门票中华美食街"},
@@ -41,7 +43,7 @@
     computed: {
       pages() {
         const pages = [];
-        this.iconList.forEach((item, index) => {
+        this.list.forEach((item, index) => {
           const page = Math.floor(index / 8);
           if (!pages[page]) {
             pages[page] = [];
