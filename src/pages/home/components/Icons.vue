@@ -1,7 +1,6 @@
 <template>
   <div class="icons">
     <swiper :options="swiperOption">
-
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
           <div class="icon-img">
@@ -10,8 +9,6 @@
           <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
-
-
     </swiper>
   </div>
 </template>
