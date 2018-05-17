@@ -68,6 +68,7 @@
     height 0
     overflow hidden
     padding-bottom 50%
+    margin-top .1rem
 
   .icon
     position relative
