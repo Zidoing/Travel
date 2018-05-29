@@ -9,7 +9,7 @@ import 'styles/reset.css'  // 通用设置 css  不同手机初始化样式不�
 import 'styles/border.css' // 通用设置 css  不同手机像素点不一样
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
-
+import store from './store'
 
 Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false;
@@ -19,6 +19,7 @@ fastClick.attach(document.body);   // 有的手机点击有300毫秒延迟  使�
 new Vue({
   el: '#app',
   router,
+  store,
   components: {App},
   template: '<App/>'
 })
