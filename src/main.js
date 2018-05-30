@@ -10,6 +10,7 @@ import 'styles/border.css' // 通用设置 css  不同手机像素点不一样
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 import store from './store'
+import 'babel-polyfill'  // promise 有些浏览器无法使用 使用后可以让支持
 
 Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false;
