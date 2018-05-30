@@ -35,7 +35,7 @@
         this.showGallary = true
       },
       handleBannerClose() {
-        this.showGallary=false
+        this.showGallary = false
       }
     }
   }
