@@ -40,9 +40,11 @@
         }
       }
     },
-
     activated() {
-      window.addEventListener('scroll', this.handleScroll)
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    deactivated() {
+      window.removeEventListener('scroll', this.handleScroll);
     }
   }
 </script>
@@ -59,7 +61,7 @@
     width: .8rem
     line-height .8rem
     text-align center
-    background: #000
+    background: rgba(0, 0, 0, 0.8)
     .header-abs-back
       color: #fff
       font-size .4rem
